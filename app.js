@@ -8,8 +8,6 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-
-var app = express();
 var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/todotest'
 var mongoose = require('mongoose');
 mongoose.connect(mongoUrl, function(err) {
