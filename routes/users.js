@@ -32,5 +32,13 @@ router.post('/delete', function(req, res, next) {
     res.send('finished');
   })
 });
+router.post('/edit', function(req, res, next) {
+  var theId = req.body._id
+  var listEdit = req.body.listItem
+  List.findByIdAndUpdate(theId,{ $set: { listItem: listEdit }} function(err, finished){
+
+    res.send('finished');
+  })
+});
 
 module.exports = router;

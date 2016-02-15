@@ -35,4 +35,11 @@ $scope.orderbythis;
     $https.post('/users/delete', {_id: listId})
     .then(checkItOut())
   }
+
+  $scope.edit = function(){
+    var newListItem = $scope.listItem;
+    var listId = this.closest('row').attr('id')
+    $https.post('/users/edit', {_id: listId,listItem: newListItem})
+    .then(checkItOut())
+  }
 }])
