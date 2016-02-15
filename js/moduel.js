@@ -4,10 +4,11 @@ var app = angular.module("theApp", ['ui-router']);
 
 app.controller('mainControl', ['$scope','$https' function($scope, $https){
   $scope.listItems;
+  checkItOut()
   $scope.checkItOut = function(){
-    $https.get()
+    $https.get('/users/getAll')
     .then(function(listItems){
-      
+      $scope.listItems = listItems
     })
   }
 
