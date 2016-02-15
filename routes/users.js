@@ -25,5 +25,12 @@ router.get('/getAll', function(req, res, next) {
     res.send(wholeList);
   })
 });
+router.post('/delete', function(req, res, next) {
+  var theId = req.body._id
+  List.findByIdAndRemove(theId, function(err, finished){
+
+    res.send('finished');
+  })
+});
 
 module.exports = router;

@@ -29,4 +29,10 @@ $scope.orderbythis;
       $scope.orderbythis= '-listItem'
     }
   }
+
+  $scope.delete = function(){
+    var listId = this.closest('row').attr('id')
+    $https.post('/users/delete', {_id: listId})
+    .then(checkItOut())
+  }
 }])
