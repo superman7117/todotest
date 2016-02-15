@@ -10,6 +10,7 @@ app.controller('mainControl', ['$scope','$https' function($scope, $https){
     .then(function(listItems){
       $scope.listItems = listItems
     })
+    
   }
 
   $scope.newListItem = function(){
