@@ -1,0 +1,21 @@
+{
+  "name": "c",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Clark Ozanne <clarkozanne@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/superman7117/todotest",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
