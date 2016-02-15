@@ -9,10 +9,10 @@
 <div ng-controller='mainControl'>
   <input ng-model='listItem' type="text">
   <button ng-click='newListItem()'></button>
-  <div ng-repeat='(key,value) in list'>
+  <div ng-click='sorter()' ng-repeat='(key,value) in list'>
     {{key}}
   </div>
-  <div ng-repeat='(key,value) in list'>
+  <div ng-repeat='(key,value) in list | orderBy:'listItem''>
     {{value}}
   </div>
 

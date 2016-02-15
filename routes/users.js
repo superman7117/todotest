@@ -19,7 +19,7 @@ router.post('/new', function(req, res, next) {
     res.send('worked');
   })
 });
-router.get('//getAll', function(req, res, next) {
+router.get('/getAll', function(req, res, next) {
   List.find({}, function(err, wholeList){
 
     res.send(wholeList);

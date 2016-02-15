@@ -17,5 +17,11 @@ app.controller('mainControl', ['$scope','$https' function($scope, $https){
     $https.post('/users/new', {listItem: newListItem})
     .then(checkItOut())
   }
-
+var counter =1;
+  $scope.sorter = function(){
+    if(counter === 1){
+      counter =2;
+      
+    }
+  }
 }])
