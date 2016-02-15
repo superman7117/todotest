@@ -12,8 +12,9 @@
   <div ng-click='sorter()' ng-repeat='(key,value) in list'>
     {{key}}
   </div>
-  <div ng-repeat='(key,value) in list | orderBy:'listItem''>
-    {{value}}
+  <div ng-repeat='obj in list | orderBy:{{orderbythis}} track by $index' class='row' id='{{obj._id}}'>
+    <div>{{obj.listItem}}</div>
+    <div ng-click='delete()'>Delete</div>
   </div>
 
 

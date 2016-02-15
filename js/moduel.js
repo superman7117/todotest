@@ -18,10 +18,15 @@ app.controller('mainControl', ['$scope','$https' function($scope, $https){
     .then(checkItOut())
   }
 var counter =1;
+$scope.orderbythis;
   $scope.sorter = function(){
     if(counter === 1){
       counter =2;
-      
+      $scope.orderbythis = 'listItem'
+    }
+    else {
+      counter = 1
+      $scope.orderbythis= '-listItem'
     }
   }
 }])
