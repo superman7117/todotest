@@ -7,6 +7,8 @@
 <body ng-app="theApp">
   Lister:
 <div ng-controller='mainControl'>
+  <input ng-model='listItem' type="text">
+  <button ng-click='newListItem()'></button>
   <div ng-repeat='(key,value) in list'>
     {{key}}
   </div>
