@@ -4,7 +4,18 @@
   <meta charset="UTF-8">
   <title>Document</title>
 </head>
-<body>
+<body ng-app="theApp">
+  Lister:
+<div ng-controller='mainControl'>
+  <div ng-repeat='(key,value) in list'>
+    {{key}}
+  </div>
+  <div ng-repeat='(key,value) in list'>
+    {{value}}
+  </div>
+
+
+</div>
 
 </body>
 </html>
